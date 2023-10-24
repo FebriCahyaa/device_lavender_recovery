@@ -43,7 +43,14 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_SED_BINARY=1
 	export FOX_USE_XZ_UTILS=1
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
-        
+
+	# Extra Command
+        export EXTRA_CMD="export OF_MAINTAINER=FebriCahyaa"
+
+        # Magisk
+        ## Use the Latest Release of Magisk for the OrangeFox addon
+        export OF_USE_LATEST_MAGISK=true
+
         # dynamic/retrofitted
 	if [ "$FOX_USE_DYNAMIC_PARTITIONS" = "1" ]; then
 		export FOX_VANILLA_BUILD=1
